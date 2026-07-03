@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 import dotenv from "dotenv";
 import { GoogleGenAI, Type } from "@google/genai";
-import { createServer as createViteServer } from "vite";
 
 dotenv.config();
 
@@ -493,6 +492,7 @@ REGLAS DE INTERACCIÓN CIENTÍFICA EN REGULACIÓN FISIOLÓGICA Y ESTRÉS:
 async function main() {
   if (process.env.NODE_ENV !== "production") {
     console.log("Starting in DEVELOPMENT mode with Vite Middleware...");
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
@@ -507,11 +507,16 @@ async function main() {
     });
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`ANTIDRAMA backend running on http://localhost:${PORT}`);
-  });
+  // Bind to port in non-serverless environments
+  if (!process.env.VERCEL) {
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`ANTIDRAMA backend running on http://localhost:${PORT}`);
+    });
+  }
 }
 
 main().catch((err) => {
   console.error("Failed to start server:", err);
 });
+
+export default app;

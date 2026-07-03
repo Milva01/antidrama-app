@@ -2612,7 +2612,7 @@ export default function App() {
             <div className="mt-4 space-y-2">
               <h3 className="text-white font-extrabold text-lg tracking-wide">ANTIDRAMA-BOT</h3>
               <p className="text-slate-400 text-[11px] leading-relaxed max-w-[280px]">
-                "Validando tu cansancio del ecosistema corporativo sin un solo gramo de drama o autoayuda vacía."
+                "Tu espacio para regular emociones y recuperar el equilibrio. Juntos gestionamos la ira, el miedo, la apatía y el bajón de forma directa y sin drama."
               </p>
             </div>
 
@@ -2884,7 +2884,7 @@ export default function App() {
               </summary>
               <div className="px-3 pb-3 pt-0.5 text-[10.5px] text-slate-400 leading-relaxed space-y-2 border-t border-slate-900/50 font-mono">
                 <p>
-                  Esta es un Yo Auxiliar modelado bajo la filosofía de "<strong>Menos reacción, más dirección</strong>". Reconoce el drama del ecosistema corporativo sin alimentarlo, devolviéndote la lucidez práctica en 3 pasos ordenados.
+                  Este es un Yo Auxiliar modelado bajo la filosofía de "<strong>Menos reacción, más dirección</strong>". Te ayuda a regular y canalizar tus emociones (ira, miedo, apatía y bajón) para devolverte la lucidez práctica en 3 pasos ordenados.
                 </p>
               </div>
             </details>
